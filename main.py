@@ -33,13 +33,14 @@ def title():
     print('\n')
 
 
-if __name__ == "__main__":
-
+def luhnAlgorithm():
     title()
     now = datetime.now()
     dt_string = now.strftime("| %d/%m/%Y  | %H:%M:%S      |")
 
     while True:
+
+        # ===================================== PRINTING THE OUTPUT ==============================================
 
         print("\n\t\t\t ====================================================================\n")
         print("\nPress 0: To Stop / Terminate")
@@ -51,8 +52,20 @@ if __name__ == "__main__":
 
         elif choice == 1:
             cardNo = input("Enter a credit card number to validate : ")  # 79927398713 -> Valid credit card number
-            f.write("\n\t\t\t =================================================================== \n")
             print("\n\t\t\t\t\t | Date        | Time          |\n", '\t\t\t\t\t', dt_string, '\n')
+
+            if checkLuhn(cardNo):
+                print("This is a valid card \n")
+            else:
+                print("This is not a valid card\n")
+        else:
+            print("\n\nInvalid Input....\n\n")
+
+        # ===================================== WRITING IN NEW FILE ==============================================
+
+        if choice == 1:
+
+            f.write("\n\t\t\t =================================================================== \n")
             f.write("\t\t\t ___________________________________________________________________   \n")
             f.write('                                -------------------------------\n')
             f.write(f'\t\t\t\t\t\t\t\t| Date        | Time          |\n \t\t\t\t\t\t\t\t{dt_string} \n')
@@ -61,14 +74,15 @@ if __name__ == "__main__":
             f.write(f'\n\t\t\t\t\tCredit card number       =>       {cardNo} ')
 
             if checkLuhn(cardNo):
-                print("This is a valid card \n")
                 f.write("\n                    Status                   =>       Valid\n")
                 f.write("\t\t\t ___________________________________________________________________   \n")
                 f.write("\n\t\t\t =================================================================== \n")
             else:
-                print("This is not a valid card\n")
                 f.write("\n                    Status                   =>       Invalid\n")
                 f.write("\t\t\t ___________________________________________________________________  \n")
                 f.write("\n\t\t\t =================================================================== \n")
-        else:
-            print("\n\nInvalid Input....\n\n")
+
+
+if __name__ == "__main__":
+
+    luhnAlgorithm()
