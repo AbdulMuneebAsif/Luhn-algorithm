@@ -61,7 +61,7 @@ if __name__ == "__main__":
             if checkLuhn(cardNo):
                 print("This is a valid card \n")
                 f.write("\n\t\t\t\t\t     Status              |       Valid\n")
-                f.write("\t\t\t ___________________________________________________________________  \n")
+                f.write("\t\t\t ___________________________________________________________________   \n")
                 f.write("\n\t\t\t =================================================================== \n")
             else:
                 print("This is not a valid card\n")
