@@ -3,7 +3,7 @@ from datetime import datetime
 f = open("cardNumber.txt", 'a')
 
 
-def checkLuhn (cardNum):
+def checkLuhn(cardNum):
     nDigits = len(cardNum)
     nSum = 0
     isSecond = False
@@ -34,9 +34,7 @@ def title():
 
 
 if __name__ == "__main__":
-
     title()
-
     now = datetime.now()
     dt_string = now.strftime("%d/%m/%Y  | \t\t %H:%M:%S")
 
@@ -53,7 +51,7 @@ if __name__ == "__main__":
         elif choice == 1:
             cardNo = input("Enter a credit card number to validate : ")  # 79927398713-->Valid credit card number
             f.write("\n\t\t\t =================================================================== \n")
-            print("\n\t\t\t\t\t Date \t\t | \t\t time  \n", '\t\t\t\t\t' , dt_string, '\n')
+            print("\n\t\t\t\t\t Date \t\t | \t\t time  \n", '\t\t\t\t\t', dt_string, '\n')
             f.write(f'\n\t\t\t\t\t\t\t\t Date \t\t | \t\t time  \n \t\t\t\t\t\t\t\t {dt_string}')
             f.write('\t\t\t ')
             f.write("\n\t\t\t ___________________________________________________________________ ")
