@@ -48,7 +48,7 @@ if __name__ == "__main__":
             exit()
 
         elif choice == 1:
-            cardNo = input("Enter a credit card number to validate : ")  # 79927398713-->Valid credit card number
+            cardNo = input("Enter a credit card number to validate : ")  # 79927398713 -> Valid credit card number
             f.write("\n\t\t\t =================================================================== \n")
             print("\n\t\t\t\t\t Date \t\t | \t\t time  \n", '\t\t\t\t\t', dt_string, '\n')
             f.write(f'\n\t\t\t\t\t\t\t\t Date \t\t | \t\t time  \n \t\t\t\t\t\t\t\t {dt_string}')
