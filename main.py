@@ -36,7 +36,7 @@ def title():
 if __name__ == "__main__":
     title()
     now = datetime.now()
-    dt_string = now.strftime("%d/%m/%Y  | \t\t %H:%M:%S")
+    dt_string = now.strftime("| %d/%m/%Y  | %H:%M:%S      |")
     while True:
 
         print("\n\t\t\t ====================================================================\n")
@@ -50,18 +50,21 @@ if __name__ == "__main__":
         elif choice == 1:
             cardNo = input("Enter a credit card number to validate : ")  # 79927398713 -> Valid credit card number
             f.write("\n\t\t\t =================================================================== \n")
-            print("\n\t\t\t\t\t Date \t\t | \t\t time  \n", '\t\t\t\t\t', dt_string, '\n')
-            f.write(f'\n\t\t\t\t\t\t\t\t Date \t\t | \t\t time  \n \t\t\t\t\t\t\t\t {dt_string}')
-            f.write('\t\t\t ')
-            f.write(f'\n\t\t\t\t\tCredit card number       |       {cardNo} ')
+            print("\n\t\t\t\t\t | Date        | Time          |\n", '\t\t\t\t\t', dt_string, '\n')
+            f.write("\t\t\t ___________________________________________________________________   \n")
+            f.write('                                -------------------------------\n')
+            f.write(f'\t\t\t\t\t\t\t\t| Date        | Time          |\n \t\t\t\t\t\t\t\t{dt_string} \n')
+            f.write('                                -------------------------------')
+            f.write('\n')
+            f.write(f'\n\t\t\t\t\tCredit card number       =>       {cardNo} ')
             if checkLuhn(cardNo):
                 print("This is a valid card \n")
-                f.write("\n\t\t\t\t\t     Status              |       Valid\n")
+                f.write("\n                    Status                   =>       Valid\n")
                 f.write("\t\t\t ___________________________________________________________________   \n")
                 f.write("\n\t\t\t =================================================================== \n")
             else:
                 print("This is not a valid card\n")
-                f.write("\n\t\t\t\t\t     Status              |       Invalid\n")
+                f.write("\n                    Status                   =>       Invalid\n")
                 f.write("\t\t\t ___________________________________________________________________  \n")
                 f.write("\n\t\t\t =================================================================== \n")
         else:
