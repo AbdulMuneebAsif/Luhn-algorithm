@@ -37,7 +37,6 @@ if __name__ == "__main__":
     title()
     now = datetime.now()
     dt_string = now.strftime("%d/%m/%Y  | \t\t %H:%M:%S")
-
     while True:
 
         print("\n\t\t\t ====================================================================\n")
