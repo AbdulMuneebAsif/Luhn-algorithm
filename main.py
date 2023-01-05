@@ -56,7 +56,7 @@ if __name__ == "__main__":
             print("\n\t\t\t\t\t Date \t\t | \t\t time  \n",'\t\t\t\t\t' , dt_string, '\n')
             f.write(f'\n\t\t\t\t\t\t\t\t Date \t\t | \t\t time  \n \t\t\t\t\t\t\t\t {dt_string}')
             f.write('\t\t\t ')
-            f.write("\n\t\t\t ___________________________________________________________________  ")
+            f.write("\n\t\t\t ___________________________________________________________________ ")
             f.write(f'\n\t\t\t\t\tCredit card number       |       {cardNo} ')
             if checkLuhn(cardNo):
                 print("This is a valid card \n")
