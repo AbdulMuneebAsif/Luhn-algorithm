@@ -34,9 +34,11 @@ def title():
 
 
 if __name__ == "__main__":
+
     title()
     now = datetime.now()
     dt_string = now.strftime("| %d/%m/%Y  | %H:%M:%S      |")
+
     while True:
 
         print("\n\t\t\t ====================================================================\n")
@@ -57,6 +59,7 @@ if __name__ == "__main__":
             f.write('                                -------------------------------')
             f.write('\n')
             f.write(f'\n\t\t\t\t\tCredit card number       =>       {cardNo} ')
+
             if checkLuhn(cardNo):
                 print("This is a valid card \n")
                 f.write("\n                    Status                   =>       Valid\n")
