@@ -1,13 +1,13 @@
 f = open("cardNumber.txt", 'a')
 
 
-def checkLuhn(cardNo):
-    nDigits = len(cardNo)
+def checkLuhn (cardNum):
+    nDigits = len(cardNum)
     nSum = 0
     isSecond = False
 
     for i in range(nDigits - 1, -1, -1):
-        d = ord(cardNo[i]) - ord('0')
+        d = ord(cardNum[i]) - ord('0')
 
         if isSecond == True:
             d = d * 2
