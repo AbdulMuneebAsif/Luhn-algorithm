@@ -1,3 +1,5 @@
+from datetime import datetime
+
 f = open("cardNumber.txt", 'a')
 
 
@@ -35,6 +37,9 @@ if __name__ == "__main__":
 
     title()
 
+    now = datetime.now()
+    dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
+
     while True:
 
         print("\nPress 0: To Stop / Terminate")
@@ -47,15 +52,18 @@ if __name__ == "__main__":
         elif choice == 1:
             cardNo = input("Enter a credit card number to validate : ")  # 79927398713-->Valid credit card number
             f.write("\n\t\t\t =================================================================== \n")
-            f.write(f'credit card number to validate => {cardNo} ')
+            print("\nDate and time => ", dt_string, '\n')
+            f.write(f'\nDate and time                  : {dt_string}')
+            f.write("\n")
+            f.write(f'credit card number             : {cardNo} ')
 
             if checkLuhn(cardNo):
                 print("This is a valid card \n")
-                f.write("\nThis is a valid card\n")
+                f.write("\nStatus                         : Valid credit card Number\n")
                 f.write("\n\t\t\t =================================================================== \n")
             else:
                 print("This is not a valid card\n")
-                f.write("\nThis is not a valid card\n")
+                f.write("\nStatus                         : Invalid credit card number\n")
                 f.write("\n\t\t\t =================================================================== \n")
         else:
             print("\n\nInvalid Input....\n\n")
