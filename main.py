@@ -43,7 +43,7 @@ if __name__ == "__main__":
             exit()
 
         elif choice == 1:
-            cardNo = input("Enter a credit card number to validate : ")  # 79927398713 -->Valid credit card number
+            cardNo = input("Enter a credit card number to validate : ")  # 79927398713-->Valid credit card number
             f.write("\n\t\t\t =================================================================== \n")
             f.write(f'credit card number to validate => {cardNo} ')
 
